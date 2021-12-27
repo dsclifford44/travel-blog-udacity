@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+.socialIcon {
+    text-decoration: none;
+    color: rgba(68, 179, 204, 0.9);;
+    transition: color 0.2s;
+    margin: 0 20px;
+    font-size: 3em;
+}
+
+.socialIcon:hover {
+    opacity: 0.8;
+}

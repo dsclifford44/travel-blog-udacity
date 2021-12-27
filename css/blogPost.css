@@ -1,0 +1,220 @@
+@charset "utf-8";
+@import "./socialIcons.css";
+@import "./links.css";
+
+body {
+    font-family: "Readex Pro", sans-serif;
+    background: white;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+.container {
+    color: rgba(65, 155, 175, 0.9);
+    display: grid;
+    width: 90%;
+    margin: auto;
+    margin-top: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 50px 1fr;
+    grid-template-areas: 
+    "hd"
+    "nav"
+    "bio"
+    "main"
+    "ft";
+}
+
+.box {
+    background: white;
+ }
+
+ /*header section*/
+.header {
+    grid-area: hd;
+    color: rgba(68, 179, 204, 0.9);
+    padding: 0 20px 20px 20px;
+    text-align: center;
+    font-size: 2em;
+}
+
+.nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 1.25em;
+    background-color: rgba(68, 179, 204, 0.9);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    padding-top: 10px;
+    z-index: 3;
+}
+
+.menu {
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.2s;
+    color: white;
+}
+
+.menu:hover {
+    opacity: 0.8;
+}
+
+/*bio section*/
+.bio {
+    background-color: whitesmoke;
+    grid-area: bio;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.portrait {
+    background-color: whitesmoke;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 10pt;
+}
+
+img {
+    width: 150px;
+    border-radius: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.descrip {
+    background-color: whitesmoke;
+    color: rgba(68, 179, 204, 0.9);
+    text-align: center;
+    padding-top: 30px;
+}
+
+/*main section*/
+#one {
+    font-size: 2em;
+    margin-bottom: -50px;
+}
+
+#six {
+    margin-bottom: 30px;
+}
+
+.content {
+    grid-area: main;
+}
+
+.blogText {
+    text-align: justify;
+    padding: 10px;
+}
+
+.mainImage {
+    background-image: url(../images/bayOfFires.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vw;
+    width: 90vw;
+    margin: 20px 0;
+}
+
+/*footer section*/
+footer {
+    background-color: whitesmoke;
+    color: rgba(68, 179, 204, 0.9);
+    grid-area: ft;
+    z-index: 1;
+    padding: 10px 10px;
+}
+
+.foot1 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    display: table;
+    margin: 0 auto;
+}
+
+input {
+    font-size: 16px;
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    background-color: rgba(68, 179, 204, 0.9);
+    color: white;
+    border: none;
+    transition: color 0.2s;
+  }
+
+input[type=submit]:hover {
+    background-color: rgba(31, 46, 75, 0.9);
+    opacity: 0.8;
+}
+
+.foot2 {
+    padding-top: 20px;
+    text-align: center;
+}
+
+@media(min-width:900px){
+    .container {
+        display: grid;
+        width: 90%;
+        margin: auto;
+        margin-top: 0px;
+        grid-template-columns: repeat(8,1fr);
+        grid-template-rows: auto 50px 1fr;
+        grid-template-areas: 
+        "hd hd hd hd hd hd hd hd"
+        "nav nav nav nav nav nav nav nav"
+        "bio bio bio bio bio bio bio bio"
+        "main main main main main main main main"
+        "ft ft ft ft ft ft ft ft";
+        }
+    
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .nav {
+        justify-content: center;
+    }
+
+    .menu{
+        padding: 20px;
+    }
+
+    .descrip {
+        margin: 0 auto;
+        max-width: 600px;
+    }
+
+    .blogText {
+        font-size: 20px;
+        margin: 0 auto;
+        max-width: 900px;
+    }
+
+    footer {
+        padding: 50px 0;
+    }
+}
